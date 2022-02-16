@@ -8,6 +8,7 @@ MAINTAINER R. Paul Wiegand <wiegandrp@winthrop.edu>
 # Install relevant software
 RUN apt-get -yq update
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y update
 
 # Make sure we have additional python packages we need
 ADD requirements.txt /tmp/requirements.txt
