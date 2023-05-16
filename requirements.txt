@@ -2,7 +2,12 @@ matplotlib
 plotly
 pandas
 scipy
-sklearn
+scikit-learn
 tensorflow
 scikit-learn
 gym
+seaborn
+tensorboard
+tensorflow-estimator
+networkx
+

@@ -6,7 +6,7 @@ FROM tensorflow/tensorflow:latest
 MAINTAINER R. Paul Wiegand <wiegandrp@winthrop.edu>
 
 # Install relevant software
-RUN apt-get -yq update
+RUN apt-get -yq update  --fix-missing
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y update
 
@@ -15,7 +15,7 @@ ADD requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
 
-RUN apt-get -yqq install man less nano vim emacs git
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -yqq install man less nano vim emacs git
 
 # Create a user called "student" and
 # enter the container as that user
