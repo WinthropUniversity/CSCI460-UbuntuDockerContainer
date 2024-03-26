@@ -9,6 +9,7 @@ MAINTAINER R. Paul Wiegand <wiegandrp@winthrop.edu>
 RUN apt-get -yq update  --fix-missing
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y update
+RUN apt-get -yq install libgl1-mesa-glx
 
 # Make sure we have additional python packages we need
 ADD requirements.txt /tmp/requirements.txt

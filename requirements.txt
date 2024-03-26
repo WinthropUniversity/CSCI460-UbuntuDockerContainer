@@ -10,4 +10,4 @@ seaborn
 tensorboard
 tensorflow-estimator
 networkx
-
+opencv-python
